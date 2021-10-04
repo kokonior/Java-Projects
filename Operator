@@ -1,0 +1,9 @@
+#Operator
+a = int(input("Masukkan nilai: "))
+b = int(input("Masukkan nilai: "))
+
+c = a+b
+d = str(c)
+print ("Hasil %i + %i = %i" % (a,b,c))
+print(d)
+print(type(d))
