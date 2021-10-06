@@ -1,0 +1,76 @@
+class linkList{
+    public int nim;
+    public String nama;
+    public linkList next;
+    public linkList previous;
+    
+    public linkList(int nim, String nama){
+        this.nim = nim;
+        this.nama = nama;
+    }
+    
+    public void displayLink(){
+        System.out.println("\t" + nim + " " + nama);
+    }
+}
+
+class Queue{
+    private linkList first;
+    private linkList last;
+    
+    public boolean isEmpty(){
+        return first == null;
+    }
+    
+    public void insert(int nim, String nama){
+        linkList newList = new linkList(nim, nama);
+        if(isEmpty()){
+            first = newList;
+        }else{
+            last.next = newList;
+            newList.previous = last;
+        }
+        last = newList;
+    }
+    
+    public linkList remove(){
+        linkList temp = first;
+        if(first.next == null){
+            last = null;
+        }else{
+            first.next.previous = null;
+        }
+        first = first.next;
+        return temp;
+    }
+    
+    public void display(){
+        System.out.println("Queue (front-->rear): ");
+        linkList current = first;
+        while(current != null){
+            current.displayLink();
+            current = current.next;
+        }
+        System.out.println("");
+    }
+}
+
+public class QueueApp {
+    public static void main(String[] args) {
+        Queue theQueue = new Queue();
+        
+        theQueue.insert(1665100, "Dee");
+        theQueue.insert(1665200, "Deaja");
+        theQueue.display();
+        
+        theQueue.insert(1665300, "Ami");
+        theQueue.insert(1665400, "Haya");
+        theQueue.insert(1665500, "Yati");
+        theQueue.display();
+        
+        theQueue.remove();
+        theQueue.remove();
+
+        theQueue.display();
+    }
+}
