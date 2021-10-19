@@ -58,6 +58,17 @@ public class Chindyfebryan {
                 System.out.println(name2);
             }
         }
+        else if (pokemon1.equals(e)){
+            if (pokemon2.equals(w)||pokemon2.equals(i)){
+                System.out.println(name1);
+            }
+            else if(pokemon2.equals(e)){
+                System.out.println("Draw");
+            }
+            else if(pokemon2.equals(f)||pokemon2.equals(g)){
+            System.out.println(name2);
+            }
+        }
         in.close();
     }
 }
