@@ -17,6 +17,7 @@ public class Main {
             System.out.println("Nomor Pelanggan tidak ditemukan");
             return;
         }
+        System.out.println("ini teh scanner barang");
         System.out.println("================");
         userLogin.displayUserDetail();
         System.out.println("================");
