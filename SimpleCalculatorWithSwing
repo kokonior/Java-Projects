@@ -1,0 +1,89 @@
+//By Pyndho Cevin Taraya
+import java.awt.event.*;
+import javax.swing.*;
+
+public class FourOperations implements ActionListener{
+    private JTextField jTFinput1, jTFinput2, jTFHasil;
+    private JLabel label1, label2, labelHasil;
+    private JButton btnJumlah, btnKurang, btnBagi, btnKali;
+
+    public FourOperations(){
+        JFrame frame = new JFrame();
+        frame.setBounds(200,200,400,225);
+        frame.setTitle("SIMPLE PROGRAM TO COUNT");
+
+        label1 = new JLabel("Bilangan 1 : ");
+        label1.setBounds(25, 25, 100, 25);
+        frame.add(label1);
+
+        label2 = new JLabel("Bilangan 2 : ");
+        label2.setBounds(25, 75, 100, 25);
+        frame.add(label2);
+
+        jTFinput1 = new JTextField();
+        jTFinput1.setBounds(125,25,75,25);
+        frame.add(jTFinput1);
+
+        jTFinput2 = new JTextField();
+        jTFinput2.setBounds(125,75,75,25);
+        frame.add(jTFinput2);
+
+        jTFHasil = new JTextField();
+        jTFHasil.setBounds(225, 125, 125, 25);
+        frame.add(jTFHasil);
+
+        btnJumlah = new JButton("+");
+        frame.add(btnJumlah);
+        btnJumlah.setBounds(225,25,50, 25);
+
+        btnKurang = new JButton("-");
+        frame.add(btnKurang);
+        btnKurang.setBounds(225,75,50, 25);
+
+        btnKali = new JButton("*");
+        frame.add(btnKali);
+        btnKali.setBounds(300,25,50, 25);
+
+        btnBagi = new JButton("/");
+        frame.add(btnBagi);
+        btnBagi.setBounds(300,75,50, 25);
+
+        labelHasil = new JLabel("Hasil : ");
+        labelHasil.setBounds(160, 125, 100, 25);
+        frame.add(labelHasil);
+
+        frame.setLayout(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        btnJumlah.addActionListener(this);
+        btnKali.addActionListener(this);
+        btnKurang.addActionListener(this);
+        btnBagi.addActionListener(this);
+    }
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource() == btnKali){
+            int bilangan1 = (Integer.parseInt(jTFinput1.getText().trim()));
+            int bilangan2 = (Integer.parseInt(jTFinput2.getText().trim()));
+            int hasil = bilangan1 * bilangan2;
+            jTFHasil.setText(String.valueOf(hasil));
+        } else if(e.getSource() == btnJumlah){
+            int bilangan1 = (Integer.parseInt(jTFinput1.getText().trim()));
+            int bilangan2 = (Integer.parseInt(jTFinput2.getText().trim()));
+            int hasil = bilangan1 + bilangan2;
+            jTFHasil.setText(String.valueOf(hasil));
+        } else if(e.getSource() == btnBagi){
+            int bilangan1 = (Integer.parseInt(jTFinput1.getText().trim()));
+            int bilangan2 = (Integer.parseInt(jTFinput2.getText().trim()));
+            int hasil = bilangan1 / bilangan2;
+            jTFHasil.setText(String.valueOf(hasil));
+        } else if(e.getSource() == btnKurang){
+            int bilangan1 = (Integer.parseInt(jTFinput1.getText().trim()));
+            int bilangan2 = (Integer.parseInt(jTFinput2.getText().trim()));
+            int hasil = bilangan1 - bilangan2;
+            jTFHasil.setText(String.valueOf(hasil));
+        } 
+    }
+    public static void main(String[] args) {
+        FourOperations obj = new FourOperations();
+    }
+}
