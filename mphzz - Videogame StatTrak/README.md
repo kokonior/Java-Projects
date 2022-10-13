@@ -12,3 +12,5 @@ UML class-UD1.pdf in files
 
 Wireframe:
 UD2.pdf in files
+
+![alt text](https://github.com/kokonior/Java-Projects/blob/main/mphzz%20-%20Videogame%20StatTrak/STATTRAKGIF.gif?raw=true)
