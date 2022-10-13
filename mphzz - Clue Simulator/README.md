@@ -1,0 +1,5 @@
+# Data Structure Clue Program
+- Detective Jill + Assistant Jack, Clue simulation
+Dr. Foo has been murdered! Detective Jill must determine the murderer, crime scene, and weapon. There are six possible murders (numbered 1 through 6, Professor Plum to Mrs. Peacock), 10 locations (1 through 10, ballroom to cellar), and six weapons (1 through 6, lead pipe to spanner). Detective Jill tries to guess the correct combination. Each guess is a theory. She asks her assistant, Jack, to confirm or refute each theory.
+
+Note that Assistant Jack will randomly tell you which of your guesses are wrong, if multiple are wrong. So if you ask Assistant Jack to check your answer with the same set of guesses, you may get a different item that is wrong which means that both the first and second items returned are wrong. When checking guesses with Assistant Jack, your number of guesses (times you ask to check the potential answer) is kept track of. Your goal is to write a program as if you were Detective Jill which consistently finds the solution in <= 20 checks for any of the three answer sets above, that means you didn't just get lucky!
