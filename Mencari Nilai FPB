@@ -1,0 +1,46 @@
+package mencari_fpb;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Afwaans
+ */
+
+public class Mencari_fpb {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m, n, r, q;
+        String next = "y";
+        
+        do{
+            System.out.println("-----Selamat Datang Di Program Mencari FPB-----");
+        System.out.print("Masukkan Nilai m: ");
+        m = sc.nextInt();
+        
+        System.out.print("Masukkan Nilai n: ");
+        n = sc.nextInt();
+        
+        System.out.println("----------------------");
+        if(n==0){
+            System.out.println("FPB dari (" +m+","+n+ ") adalah "+ m);
+        }else {
+            System.out.println("m = " +m +" n = "+n);
+            do{
+                r = m/n;
+                q = m-(r*n);
+                m = n;
+                n = q; 
+                System.out.println("m = " +m +" n = "+n + " r = "+ q);
+            }while(n > 1);
+            System.out.println("----------------------");
+            System.out.println("Maka FPB = " + m);
+        }
+           
+            Scanner lagi= new Scanner(System.in);
+            System.out.println("FPB Lain? ");
+            System.out.println("y/t");
+            next = lagi.nextLine();
+        }while(next.equalsIgnoreCase("y"));
+    }
+}
