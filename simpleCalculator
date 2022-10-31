@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class calculator {
+    public static void main(String[] args) {
+
+        char operator;
+        Double number1, number2, result;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Plih operator: +,-,:, or x");
+        operator = input.next().charAt(0);
+
+        System.out.println("Masukan angka pertama: ");
+        number1= input.nextDouble();
+
+        System.out.println("Masukan angka kedua: ");
+        number2 = input.nextDouble();
+
+        switch(operator){
+            case '+':
+            result = number1 + number2;
+            System.out.println(number1 + "+" + number2 + "=" +  result );
+            break;
+
+            case '-':
+            result = number1 - number2;
+            System.out.println(number1 + "-" + number2 + "=" +  result );
+            break;
+
+            case ':':
+            result = number1 / number2;
+            System.out.println(number1 + "/" + number2 + "=" +  result );
+            break;
+
+            case 'x':
+            result = number1 * number2;
+            System.out.println(number1 + "*" + number2 + "=" +  result );
+            break;
+
+            default :
+            System.out.println("Invalid operator !");
+            break;
+        }
+        input.close();
+    }
+}
